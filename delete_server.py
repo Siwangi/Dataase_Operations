@@ -9,9 +9,9 @@ if conn.is_connected():
 cursor = conn.cursor()
 
 try:
-    cursor.execute("insert into server values (4, 'Rasika', 50000)")
+    cursor.execute("delete from server where name = 'Rasika'")
     conn.commit()
-    print("Server added")
+    print("Server deleted")
 except:
     conn.rollback()
 
